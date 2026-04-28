@@ -1,3 +1,5 @@
+![factorio-docs-mcp banner](./banner.png)
+
 # factorio-docs-mcp
 
 An MCP server that lively mirrors the **Factorio Lua API** documentation at
