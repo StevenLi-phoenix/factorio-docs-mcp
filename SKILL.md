@@ -6,15 +6,11 @@ allowed-tools: Bash
 
 # Factorio 文档 Skill
 
-## 激活时：确认索引可用
+## 索引状态
 
-**每次激活本 skill 时，先执行以下检查：**
-
-```bash
-python scripts/build_index.py
+```!
+python ${CLAUDE_SKILL_DIR}/scripts/build_index.py
 ```
-
-`build_index.py` 默认检测到 `references/docs.db` 已存在时直接跳过，不重建；仅当 db 缺失时才从本地 `references/runtime-api.json` 重建（无需网络，约 1 秒）。确认输出 "Already exists" 或 "Built docs.db" 后再进行查询。
 
 ## 快速开始
 
