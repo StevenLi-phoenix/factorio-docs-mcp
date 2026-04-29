@@ -9,7 +9,7 @@ allowed-tools: Bash
 ## 索引状态
 
 ```!
-python3 ${CLAUDE_SKILL_DIR}/scripts/build_index.py --force
+python3 ${CLAUDE_SKILL_DIR}/scripts/build_index.py
 ```
 
 ## 快速开始
@@ -20,24 +20,24 @@ python3 ${CLAUDE_SKILL_DIR}/scripts/build_index.py --force
 cd <skill_root>
 
 # 全文搜索（BM25 排序，支持 porter stemming）
-python scripts/search.py "inventory insert"
+python3 scripts/search.py "inventory insert"
 
 # 只搜索某种类型
-python scripts/search.py --kind event "player built"
-python scripts/search.py --kind method "fluid"
-python scripts/search.py --kind attribute "energy"
+python3 scripts/search.py --kind event "player built"
+python3 scripts/search.py --kind method "fluid"
+python3 scripts/search.py --kind attribute "energy"
 
 # 精确名称查找
-python scripts/search.py --exact LuaEntity
-python scripts/search.py --exact on_built_entity
+python3 scripts/search.py --exact LuaEntity
+python3 scripts/search.py --exact on_built_entity
 
 # 列出某个类的所有成员
-python scripts/search.py --parent LuaEntity
-python scripts/search.py --parent LuaEntity --kind method
+python3 scripts/search.py --parent LuaEntity
+python3 scripts/search.py --parent LuaEntity --kind method
 
 # 增加返回数量 / 显示完整描述
-python scripts/search.py --top 30 "circuit network"
-python scripts/search.py --verbose "transport line"
+python3 scripts/search.py --top 30 "circuit network"
+python3 scripts/search.py --verbose "transport line"
 ```
 
 ## 索引内容（Factorio 2.0.76 / API v6）
@@ -56,7 +56,7 @@ python scripts/search.py --verbose "transport line"
 
 ```bash
 # 检查远端版本，有新版才重建索引（Factorio 游戏更新后运行）
-python scripts/update.py
+python3 scripts/update.py
 ```
 
 `update.py` 会比对本地缓存的 `application_version` 和远端版本，版本相同则直接退出，不重建。

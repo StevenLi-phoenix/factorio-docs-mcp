@@ -17,21 +17,21 @@ Queries hit the local `docs.db` (1.7 MB, pre-built). Network is only used when y
 
 ```bash
 # Full-text search (BM25, porter stemming)
-python scripts/search.py "inventory insert"
+python3 scripts/search.py "inventory insert"
 
 # Filter by kind: class · method · attribute · event · concept · define
-python scripts/search.py --kind event "player built"
-python scripts/search.py --kind method "fluid temperature"
+python3 scripts/search.py --kind event "player built"
+python3 scripts/search.py --kind method "fluid temperature"
 
 # Exact name lookup (case-insensitive)
-python scripts/search.py --exact LuaEntity
-python scripts/search.py --exact on_built_entity
+python3 scripts/search.py --exact LuaEntity
+python3 scripts/search.py --exact on_built_entity
 
 # All members of a class
-python scripts/search.py --parent LuaEntity --kind method
+python3 scripts/search.py --parent LuaEntity --kind method
 
 # More results / full body
-python scripts/search.py --top 30 --verbose "circuit network signal"
+python3 scripts/search.py --top 30 --verbose "circuit network signal"
 ```
 
 ## Index maintenance
@@ -39,7 +39,7 @@ python scripts/search.py --top 30 --verbose "circuit network signal"
 The pre-built index covers **Factorio 2.0.76 / API v6**. To update after a game version bump:
 
 ```bash
-python scripts/update.py   # fetches only if remote version changed
+python3 scripts/update.py   # fetches only if remote version changed
 ```
 
 ## Scripts
@@ -64,5 +64,5 @@ python scripts/update.py   # fetches only if remote version changed
 ## Tests
 
 ```bash
-python -m pytest tests/test_e2e.py -v   # 31 E2E tests, ~1s
+python3 -m pytest tests/test_e2e.py -v   # 31 E2E tests, ~1s
 ```
