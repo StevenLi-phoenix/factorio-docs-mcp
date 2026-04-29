@@ -9,7 +9,7 @@ allowed-tools: Bash
 ## 索引状态
 
 ```!
-python3 ${CLAUDE_SKILL_DIR}/scripts/build_index.py
+python3 ${CLAUDE_SKILL_DIR}/scripts/build_index.py --force
 ```
 
 ## 快速开始
